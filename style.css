@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+header{
+    
+    background-color: rgba(58, 47, 47, 0.945);
+    color: white;
+    height: 150px;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 5px;
+   
+}
+.head{
+    display: flex;
+    gap: 600px;
+    
+}
+.head h1{
+    margin: 0;
+    padding: 20px;
+    font-size: 60px;
+    position: relative;
+    left: 400px;
+    text-shadow: 2px 2px 4px #c3b2b2dd;
+}
+button{
+    color: white;
+    border: none;
+    background-color: rgba(58, 47, 47, 0);
+    font-size: 25px;
+    margin-top: 38px;
+    position: relative;
+    right: 20px;
+
+    
+}
+button:hover {
+    /* Add your hover styles here, for example: */
+    color: rgba(193, 65, 65, 0.888);
+    cursor: pointer;
+}
+main{
+    background-image: url("https://img.freepik.com/free-vector/dark-bold-hexagonal-texture-wallpaper-geometric-style_1017-43003.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+.container{
+    color: white;
+    text-align: center;
+
+}
+.container h1{
+    margin-top: 0;
+    padding-top: 20px;
+}
+.api{
+    text-align: center;
+}
+#api{
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 120px;
+}
+#butapi{
+    margin-left: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: black;
+
+}
+#butapi:hover{
+    background-color: white;
+    color: black;
+}
+#butapi:active{
+    background-color: rgba(240, 228, 228, 0.888);
+    color: black;
+}
+#text{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    font-size: 20px;
+    padding: 10px;
+    width: 70%;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgba(58, 47, 47, 0.945);
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 10px white;
+    position: fixed;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    /* z-index: 1000; */
+    
+}
+.text{
+    text-align: center;
+}
+.response-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #101118;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    color: white;
+    font-family: sans-serif;
+    width: 80%;
+    max-height: 260px;
+    height: auto;
+    overflow-y: auto;
+    /* height: auto; */
+    
+}
+.api-call{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
