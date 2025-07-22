@@ -1,0 +1,139 @@
+.status-bar {
+  height: 22px;
+  background-color: var(--bg-tertiary);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.status-left,
+.status-center,
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.status-item.clickable {
+  cursor: pointer;
+}
+
+.status-item.clickable:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.status-success {
+  color: var(--accent-green);
+}
+
+.status-error {
+  color: var(--accent-red);
+}
+
+.status-warning {
+  color: var(--accent-orange);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-stats {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+  .status-center {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-bar {
+    padding: 0 4px;
+    gap: 8px;
+  }
+  
+  .status-left,
+  .status-right {
+    gap: 8px;
+  }
+  
+  .status-item {
+    padding: 2px 4px;
+  }
+  
+  /* Hide less important items on mobile */
+  .status-left .status-item:nth-child(n+2) {
+    display: none;
+  }
+  
+  .status-right .status-item:nth-child(-n+3) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-bar {
+    font-size: 10px;
+  }
+  
+  .status-left .status-item:first-child {
+    display: none;
+  }
+  
+  .status-right .status-item:nth-child(-n+4) {
+    display: none;
+  }
+}
+
+/* Animation for status changes */
+.status-item {
+  animation: statusFadeIn 0.3s ease-in-out;
+}
+
+@keyframes statusFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Special styling for active states */
+.status-item.active {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.status-item.active:hover {
+  background-color: #005a9e;
+}

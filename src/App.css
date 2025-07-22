@@ -1,0 +1,111 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.sidebar-resizer {
+  width: 4px;
+  background-color: transparent;
+  cursor: col-resize;
+  position: relative;
+}
+
+.sidebar-resizer:hover {
+  background-color: var(--accent-blue);
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ai-chat-resizer {
+  width: 4px;
+  background-color: transparent;
+  cursor: col-resize;
+  position: relative;
+}
+
+.ai-chat-resizer:hover {
+  background-color: var(--accent-blue);
+}
+
+.ai-chat {
+  background-color: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Resizer active state */
+.sidebar-resizer:active,
+.ai-chat-resizer:active {
+  background-color: var(--accent-blue);
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Animation for smooth transitions */
+.sidebar,
+.ai-chat {
+  transition: width 0.2s ease-in-out;
+}
+
+/* Focus states */
+.sidebar:focus-within,
+.ai-chat:focus-within {
+  border-color: var(--accent-blue);
+}
+
+/* Scrollable areas */
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: var(--bg-hover);
+  border-radius: 3px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
